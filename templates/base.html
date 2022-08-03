@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Electronic shop{% endblock %}</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: lightgray;
+        }
+
+        .first_btn-group button {
+            background-color: dimgray;
+            padding: 20px 44px;
+            border: 1px black;
+            color: white;
+            cursor: pointer;
+            float: top;
+        }
+
+        .first_btn-group button:hover {
+            background-color: darkgrey;
+        }
+
+        .btn-group button {
+            top: -50px;
+            background-color: grey;
+            border: 1px black;
+            color: white;
+            padding: 20px 44px;
+            cursor: pointer;
+            float: left;
+        }
+
+        .btn-group button:not(:last-child) {
+            border-right: none
+        }
+
+        .btn-group:after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .btn-group button:hover {
+            background-color: darkgrey;
+        }
+
+    </style>
+</head>
+<body>
+<div class="first_btn-group" style="width: 100%">
+    <form action="http://127.0.0.1:8000/homepage" target="_self">
+        <button style="width: 100%">Electronic shop</button>
+    </form>
+</div>
+<div class="btn-group" style="width:100%">
+    <form action="http://127.0.0.1:8000/basket" target="_self">
+        <button style="width:50%">Basket</button>
+    </form>
+    <form action="http://localhost:8000/client_page" target="_self">
+        <button style="width:50%">Artur Tiurin</button>
+    </form>
+</div>
+<div class="container ">
+    {% block container %}{% endblock %}
+</div>
+</body>
+</html>
