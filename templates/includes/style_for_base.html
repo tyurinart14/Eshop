@@ -1,0 +1,48 @@
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: lightgray;
+        }
+
+        .first_btn-group button {
+            background-color: dimgray;
+            padding: 20px 44px;
+            border: 1px black;
+            color: white;
+            cursor: pointer;
+            float: top;
+        }
+
+        .first_btn-group button:hover {
+            background-color: darkgrey;
+        }
+
+        .btn-group button {
+            top: -50px;
+            background-color: grey;
+            border: 1px black;
+            color: white;
+            padding: 20px 44px;
+            cursor: pointer;
+            float: left;
+        }
+
+        .btn-group button:not(:last-child) {
+            border-right: none
+        }
+
+        .btn-group:after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .btn-group button:hover {
+            background-color: darkgrey;
+        }
+
+    </style>
