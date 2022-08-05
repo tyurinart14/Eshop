@@ -5,43 +5,22 @@
     <h1 style="color: #583305; text-align: center; height: 70px; width: 97%">Popular goods</h1>
     <hr color=brown>
     {% include 'includes/style_for_homepage.html' %}
-    <figure class="pass-photo">
-        <img src="https://www.blitzmicro.eu/12237-medium_default/AP-MYDC2TA.jpg"
-             width="200" height="200" alt="photo"
-             class="pass-photo">
-        <div style="text-align: center;"><a href="http://127.0.0.1:8000/product/laptop/">Macbook M1 2020 </a></div>
-        <div><h1 style="font-size:25px; text-align: center; color: saddlebrown">Price:</h1>
-            <h1 style="font-size: 17px; text-align: center "> 44000 UAH </h1></div>
 
-        <div style="text-align: center;">
-            <button class="b_color_2">Not available</button>
-        </div>
-    </figure>
-    <figure class="pass-photo">
-        <img src="https://catalogapp.b-cdn.net/production/images/51/86/64/32/preview/e7e3d2a4-f261-4d0f-8a20-1b4c1dc541b7.jpg"
-             width="200" height="200" alt="photo"
-             class="pass-photo">
-        <div style="text-align: center;"><a href="http://127.0.0.1:8000/product/camera/">Canon EOS20000</a></div>
-        <div><h1 style="font-size:25px; text-align: center; color: saddlebrown">Price:</h1>
-            <h1 style="font-size: 17px; text-align: center "> 23000 UAH </h1></div>
-        <form action="/basket" target="_self">
-            <div style="text-align: center;">
-                <button class="b_color">Buy device</button>
-            </div>
-        </form>
-    </figure>
-    <figure class="pass-photo">
-        <img src="https://s.cdnshm.com/catalog/au/t/319174297/xiaomi-mi-tv-p1-55.jpg"
-             width="200" height="200" alt="photo"
-             class="pass-photo">
-        <div style="text-align: center;"><a href="http://127.0.0.1:8000/product/tv/">MiTV 43'</a></div>
-        <div><h1 style="font-size:25px; text-align: center; color: saddlebrown">Price:</h1>
-            <h1 style="font-size: 17px; text-align: center "> 17000 UAH </h1></div>
-        <form action="/basket" target="_self">
-            <div style="text-align: center;">
-                <button class="b_color">Buy device</button>
-            </div>
-        </form>
-    </figure>
+
+    {% for elem in products %}
+        <figure class="pass-photo">
+            <img src="{{ elem.image }}"
+                 width="200" height="200" alt="photo"
+                 class="pass-photo">
+            <div style="text-align: center;"><a href="{{ elem.address }}">{{ elem.name }}</a></div>
+            <div><h1 style="font-size:25px; text-align: center; color: saddlebrown">Price:</h1>
+                <h1 style="font-size: 17px; text-align: center ">{{ elem.price }}</h1></div>
+            <form action="{{ elem.basket }}" target="_self">
+                <div style="text-align: center;">
+                    <button class="{{ elem.button }}">Buy device</button>
+                </div>
+            </form>
+        </figure>
+    {% endfor %}
 
 {% endblock %}

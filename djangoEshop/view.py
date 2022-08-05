@@ -1,7 +1,6 @@
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 
-
 context_info = [
     {
         "id": "0001",
@@ -55,9 +54,36 @@ context = [
     }
 ]
 
+context_product = {'products': [
+    {
+        "name": "Macbook M1 2020",
+        "image": "https://www.blitzmicro.eu/12237-medium_default/AP-MYDC2TA.jpg",
+        "address": "http://127.0.0.1:8000/product/laptop/",
+        "price": "44000 UAH",
+        "button": "b_color_2",
+        "basket": ""
+
+    }, {
+        "name": "Canon EOS20000",
+        "image": "https://catalogapp.b-cdn.net/production/images/51/86/64/32/preview/e7e3d2a4-f261-4d0f-8a20-1b4c1dc541b7.jpg",
+        "address": "http://127.0.0.1:8000/product/camera/",
+        "price": "23000 UAH",
+        "button": "b_color",
+        "basket": "/basket"
+    }, {
+        "name": "MiTV 43'",
+        "image": "https://s.cdnshm.com/catalog/au/t/319174297/xiaomi-mi-tv-p1-55.jpg",
+        "address": "http://127.0.0.1:8000/product/tv/",
+        "price": "17000 UAH",
+        "button": "b_color",
+        "basket": "/basket"
+
+    }
+]}
+
 
 def homepage(request: HttpRequest) -> render:
-    return render(request, 'homepage.html')
+    return render(request, 'homepage.html', context_product)
 
 
 def client_page(request: HttpRequest, id: str) -> render:
