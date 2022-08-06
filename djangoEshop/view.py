@@ -82,21 +82,21 @@ context_product = {'products': [
 ]}
 
 
-def homepage(request: HttpRequest) -> render:
+def homepage(request: HttpRequest):
     return render(request, 'homepage.html', context_product)
 
 
-def client_page(request: HttpRequest, id: str) -> render:
+def client_page(request: HttpRequest, id: str):
     for name in context_info:
         if name["id"] == id:
             return render(request, 'client_page.html', name)
 
 
-def basket(request: HttpRequest) -> render:
+def basket(request: HttpRequest):
     return HttpResponse('Basket')
 
 
-def product_all(request: HttpRequest, item_name: str) -> render:
+def product_all(request: HttpRequest, item_name: str):
     for name in context:
         if name["slug"] == item_name:
             return render(request, 'product_all.html', name)
