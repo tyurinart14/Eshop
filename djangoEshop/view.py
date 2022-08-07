@@ -13,10 +13,15 @@ context_info = [
     }
 ]
 
-context = [
+context_product = {'products': [
     {
         "name": "Macbook M1 2020",
-        "image": "https://appleinsider.ru/wp-content/uploads/2020/11/macbookair_ssd_main.jpg",
+        "image": "https://www.blitzmicro.eu/12237-medium_default/AP-MYDC2TA.jpg",
+        "address": "http://127.0.0.1:8000/product/laptop/",
+        "price": "44000 UAH",
+        "button": "b_color_2",
+        "basket": "",
+        "image2": "https://appleinsider.ru/wp-content/uploads/2020/11/macbookair_ssd_main.jpg",
         "description": "The lightest and thinnest laptop manufactured by Apple MacBook Air 13 M1 256Gb 2020. "
                        "It has been completely transformed, it has become even more powerful, "
                        "thanks to increased endurance and CPU performance. "
@@ -29,7 +34,13 @@ context = [
 
     }, {
         "name": "Canon EOS20000",
-        "image": "https://www.trustedreviews.com/wp-content/uploads/sites/54/2018/06/canon_eos_2000d_01.jpg",
+        "image": "https://catalogapp.b-cdn.net/production/images/51/86/64/32/preview/e7e3d2a4-f261-4d0f-8a20-1b4c1dc541b7.jpg",
+        "address": "http://127.0.0.1:8000/product/camera/",
+        "image2": "https://www.trustedreviews.com/wp-content/uploads/sites/54/2018/06/canon_eos_2000d_01.jpg",
+        "price": "23000 UAH",
+        "button": "b_color",
+        "basket": "/basket",
+        "slug": "camera",
         "description": "Create with ease the clarity of the signs from the clarity, like from a digital reflex camera,"
                        "that video cinematic clarity in Full HD format, inspire the minds of weak lighting,"
                        "with the help of the 24.1-megapixel EOS 2000D."
@@ -37,11 +48,15 @@ context = [
                        "NFC and Canon Connect software for remote capture and wireless content transfer."
                        "Try photos with a 24.1-megapixel sensor, "
                        "which is 19 times larger than the sensor of a great smartphone,"
-                       "and allows you to capture frames with an effective background, navigating for low light.",
-        "slug": "camera"
+                       "and allows you to capture frames with an effective background, navigating for low light."
     }, {
         "name": "MiTV 43'",
-        "image": "https://mobile-review.com/all/wp-content/uploads/2021/08/5-28.jpg",
+        "image": "https://s.cdnshm.com/catalog/au/t/319174297/xiaomi-mi-tv-p1-55.jpg",
+        "address": "http://127.0.0.1:8000/product/tv/",
+        "price": "17000 UAH",
+        "button": "b_color",
+        "basket": "/basket",
+        "image2": "https://mobile-review.com/all/wp-content/uploads/2021/08/5-28.jpg",
         "description": "The era of smart TVThe Mi TV P1 impresses with its harmoniously thought-out appearance with "
                        "thin bezels and stylish stands, innovative functionality, and a friendly Android TV interface."
                        "The model has a remote control connected via Bluetooth, "
@@ -50,33 +65,6 @@ context = [
                        "Now TV is not only about watching, but also about exciting leisure time for the whole family."
                        "Erase BezelsThe design of the display provides for a minimal frame",
         "slug": "tv"
-
-    }
-]
-
-context_product = {'products': [
-    {
-        "name": "Macbook M1 2020",
-        "image": "https://www.blitzmicro.eu/12237-medium_default/AP-MYDC2TA.jpg",
-        "address": "http://127.0.0.1:8000/product/laptop/",
-        "price": "44000 UAH",
-        "button": "b_color_2",
-        "basket": ""
-
-    }, {
-        "name": "Canon EOS20000",
-        "image": "https://catalogapp.b-cdn.net/production/images/51/86/64/32/preview/e7e3d2a4-f261-4d0f-8a20-1b4c1dc541b7.jpg",
-        "address": "http://127.0.0.1:8000/product/camera/",
-        "price": "23000 UAH",
-        "button": "b_color",
-        "basket": "/basket"
-    }, {
-        "name": "MiTV 43'",
-        "image": "https://s.cdnshm.com/catalog/au/t/319174297/xiaomi-mi-tv-p1-55.jpg",
-        "address": "http://127.0.0.1:8000/product/tv/",
-        "price": "17000 UAH",
-        "button": "b_color",
-        "basket": "/basket"
 
     }
 ]}
@@ -97,6 +85,6 @@ def basket(request: HttpRequest):
 
 
 def product_all(request: HttpRequest, item_name: str):
-    for name in context:
+    for name in context_product['products']:
         if name["slug"] == item_name:
             return render(request, 'product_all.html', name)
