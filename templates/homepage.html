@@ -12,7 +12,7 @@
             <img src="{{ elem.image }}"
                  width="200" height="200" alt="photo"
                  class="pass-photo">
-            <div style="text-align: center;"><a href="{{ elem.address }}">{{ elem.name }}</a></div>
+            <div style="text-align: center;"><a href="{% url 'product' item_name=elem.slug  %}">{{ elem.name }}</a></div>
             <div><h1 style="font-size:25px; text-align: center; color: saddlebrown">Price:</h1>
                 <h1 style="font-size: 17px; text-align: center ">{{ elem.price }}</h1></div>
             <form action="{{ elem.basket }}" target="_self">
