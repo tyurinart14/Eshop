@@ -1,4 +1,4 @@
-from django.http import HttpRequest, HttpResponse
+from django.http import HttpRequest, HttpResponse, Http404
 from django.shortcuts import render
 
 context_info = [
@@ -78,6 +78,7 @@ def client_page(request: HttpRequest, id: str):
     for name in context_info:
         if name["id"] == id:
             return render(request, 'client_page.html', name)
+    raise Http404
 
 
 def basket(request: HttpRequest):
@@ -88,3 +89,4 @@ def product_all(request: HttpRequest, item_name: str):
     for name in context_product['products']:
         if name["slug"] == item_name:
             return render(request, 'product_all.html', name)
+    raise Http404
