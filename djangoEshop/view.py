@@ -1,5 +1,6 @@
 from django.http import HttpRequest, HttpResponse, Http404
 from django.shortcuts import render
+from aplication.models import Product
 
 context_info = [
     {
