@@ -1,6 +1,6 @@
 from django.http import HttpRequest, HttpResponse, Http404
 from django.shortcuts import render
-from aplication.models import Product
+from aplication.models import Product, Category
 
 context_info = [
     {
@@ -13,6 +13,13 @@ context_info = [
         "image": "https://sokol-larkin.com/wp-content/uploads/2021/06/placeholder-image.jpg"
     }
 ]
+
+
+def category(request: HttpRequest, number: str):
+    context = {
+        'object': Product.objects.filter(cat_id=number)
+    }
+    return render(request, 'homepage.html', context)
 
 
 def homepage(request: HttpRequest):
@@ -36,3 +43,8 @@ def product(request: HttpRequest, item_name: str):
     for el in item:
         if el.slug == item_name:
             return render(request, 'product_all.html', {'el': el})
+    raise Http404
+
+
+def handle_not_found(request, exception):
+    return render(request, 'error_page.html')

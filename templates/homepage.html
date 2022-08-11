@@ -17,8 +17,6 @@
                 <h1 style="font-size: 17px; text-align: center ">{{ item.price }} UAH</h1></div>
             {% if item.availability %}
                 <form action="/basket" target="_self">
-            {% else %}
-                <form action="" target="_self">
             {% endif %}
             <div style="text-align: center;">
                 {% if item.availability %}

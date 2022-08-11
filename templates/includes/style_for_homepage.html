@@ -13,6 +13,19 @@
         margin: 35px;
     }
 
+    .btn-group button {
+        background-color: darkgray;
+        border: 1px green;
+        color: white;
+        padding: 10px 24px;
+        cursor: pointer;
+        float: left;
+    }
+
+    .btn-group button:hover {
+        background-color: #D3D3D3;
+    }
+
     .b_color_2 {
         background: #333333;
         color: antiquewhite;
@@ -30,6 +43,12 @@
         border: 3px;
     }
 
+    .btn-group:after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
     .b_color {
         background: #333333;
         color: antiquewhite;
@@ -41,4 +60,21 @@
     .b_color:hover {
         background-color: darkgray;
     }
+
 </style>
+<div class="btn-group" style="width:100%">
+    <form action="http://127.0.0.1:8000/homepage" target="_self">
+        <button style="width:25%">All devices</button>
+    </form>
+    <form action="http://127.0.0.1:8000/homepage/1/" target="_self">
+        <button style="width:25%">Laptops</button>
+    </form>
+    </form>
+    <form action="http://127.0.0.1:8000/homepage/2/" target="_self">
+        <button style="width:25%">Cameras</button>
+    </form>
+    </form>
+    <form action="http://127.0.0.1:8000/homepage/3/" target="_self">
+        <button style="width:25%">TVs</button>
+    </form>
+</div>

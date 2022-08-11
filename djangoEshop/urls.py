@@ -9,4 +9,7 @@ urlpatterns = [
     path('client_page/<str:id>', view.client_page),
     path('basket', view.basket),
     path('product/<str:item_name>/', view.product, name="product"),
+    path('homepage/<int:number>/', view.category, name="category"),
 ]
+
+handler404 = "djangoEshop.view.handle_not_found"
