@@ -7,17 +7,17 @@
     {% include 'includes/style_for_homepage.html' %}
 
 
-    {% for elem in products %}
+    {% for item in object %}
         <figure class="pass-photo">
-            <img src="{{ elem.image }}"
+            <img src="{{ item.image }}"
                  width="200" height="200" alt="photo"
                  class="pass-photo">
-            <div style="text-align: center;"><a href="{% url 'product' item_name=elem.slug  %}">{{ elem.name }}</a></div>
+            <div style="text-align: center;"><a href="{% url 'product' item_name=item.slug  %}">{{ item.name }}</a></div>
             <div><h1 style="font-size:25px; text-align: center; color: saddlebrown">Price:</h1>
-                <h1 style="font-size: 17px; text-align: center ">{{ elem.price }}</h1></div>
-            <form action="{{ elem.basket }}" target="_self">
+                <h1 style="font-size: 17px; text-align: center ">{{ item.price }}</h1></div>
+            <form action="{{ item.basket }}" target="_self">
                 <div style="text-align: center;">
-                    <button class="{{ elem.button }}">Buy device</button>
+                    <button class="{{ item.button }}">Buy device</button>
                 </div>
             </form>
         </figure>
