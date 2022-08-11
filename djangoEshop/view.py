@@ -1,6 +1,6 @@
 from django.http import HttpRequest, HttpResponse, Http404
 from django.shortcuts import render
-from aplication.models import ProductContext
+from aplication.models import Product
 
 context_info = [
     {
@@ -16,7 +16,7 @@ context_info = [
 
 
 def homepage(request: HttpRequest):
-    context = {"object": ProductContext.objects.all()}
+    context = {"object": Product.objects.all()}
     return render(request, 'homepage.html', context)
 
 
@@ -32,7 +32,7 @@ def basket(request: HttpRequest):
 
 
 def product(request: HttpRequest, item_name: str):
-    item = ProductContext.objects.all()
+    item = Product.objects.all()
     for el in item:
         if el.slug == item_name:
             return render(request, 'product_all.html', {'el': el})
