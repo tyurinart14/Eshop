@@ -1,9 +1,9 @@
 from django.contrib import admin
-from aplication.models import ProductContext
+from aplication.models import Product
 from aplication.models import Category
 
 
-class ProductContextAdmin(admin.ModelAdmin):
+class ProductAdmin(admin.ModelAdmin):
     list_display = "name", "slug", "cat_id"
     list_display_links = ["name"]
     prepopulated_fields = {
@@ -20,4 +20,4 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Category, CategoryAdmin)
-admin.site.register(ProductContext, ProductContextAdmin)
+admin.site.register(Product, ProductAdmin)
