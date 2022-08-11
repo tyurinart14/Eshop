@@ -11,29 +11,13 @@
         <button style="width: 100%">Electronic shop</button>
     </form>
 </div>
-<div class="second-btn-group" style="width:100%">
-    <form action="{% url "basket" %}" target="_self">
-        <button style="width:33.33%">Basket</button>
+<div class="btn-group" style="width:100%">
+    <form action="http://127.0.0.1:8000/basket" target="_self">
+        <button style="width:50%">Basket</button>
     </form>
-    {% if user.is_authenticated %}
-        <form action="{% url "client_page" %}" target="_self">
-            <button style="width:33.33%">Personal Area</button>
-        </form>
-    {% else %}
-        <form action="{% url "login" %}" target="_self">
-            <button style="width:33.33%">Login</button>
-        </form>
-    {% endif %}
+    <form action="http://127.0.0.1:8000/client_page/0001" target="_self">
+        <button style="width:50%">Artur Tiurin</button>
     </form>
-    {% if user.is_authenticated %}
-        <form action="{% url "logout" %}" target="_self">
-            <button style="width:33.33%">Logout</button>
-        </form>
-    {% else %}
-        <form action="{% url "register" %}" target="_self">
-            <button style="width:33.33%">Registration</button>
-        </form>
-    {% endif %}
 </div>
 <div class="container ">
     {% block container %}{% endblock %}
