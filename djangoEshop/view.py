@@ -1,78 +1,102 @@
-from django.http import HttpRequest, HttpResponse, Http404, HttpResponseRedirect
+from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
-from aplication.models import Product
-from django.urls import reverse_lazy
-from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.models import User
 
-
-def category(request: HttpRequest, number: str):
-    context = {
-        'object': Product.objects.filter(cat_id=number)
+context_info = [
+    {
+        "id": "0001",
+        "name": "Artur",
+        "mail": "example@gmail.com",
+        "discount_card": "13722",
+        "age": "23",
+        "city": "Kharkiv",
+        "image": "https://sokol-larkin.com/wp-content/uploads/2021/06/placeholder-image.jpg"
     }
-    return render(request, 'homepage.html', context)
+]
+
+context = [
+    {
+        "name": "Macbook M1 2020",
+        "image": "https://appleinsider.ru/wp-content/uploads/2020/11/macbookair_ssd_main.jpg",
+        "description": "The lightest and thinnest laptop manufactured by Apple MacBook Air 13 M1 256Gb 2020. "
+                       "It has been completely transformed, it has become even more powerful, "
+                       "thanks to increased endurance and CPU performance. "
+                       "Now its speed is 3.5 times faster, and machine learning has increased by as much as 9 times. "
+                       "Without charging, the MacBook functions longer than its predecessors. "
+                       "And even under heavy loads, it does not make unnecessary noise, "
+                       "because there is no fan in its design. "
+                       "Notebook Apple MacBook Air 13 M1 256Gb 2020 – power has never been so compact and thin!",
+        "slug": "laptop"
+
+    }, {
+        "name": "Canon EOS20000",
+        "image": "https://www.trustedreviews.com/wp-content/uploads/sites/54/2018/06/canon_eos_2000d_01.jpg",
+        "description": "Create with ease the clarity of the signs from the clarity, like from a digital reflex camera,"
+                       "that video cinematic clarity in Full HD format, inspire the minds of weak lighting,"
+                       "with the help of the 24.1-megapixel EOS 2000D."
+                       "Contribute Wi-Fi, "
+                       "NFC and Canon Connect software for remote capture and wireless content transfer."
+                       "Try photos with a 24.1-megapixel sensor, "
+                       "which is 19 times larger than the sensor of a great smartphone,"
+                       "and allows you to capture frames with an effective background, navigating for low light.",
+        "slug": "camera"
+    }, {
+        "name": "MiTV 43'",
+        "image": "https://mobile-review.com/all/wp-content/uploads/2021/08/5-28.jpg",
+        "description": "The era of smart TVThe Mi TV P1 impresses with its harmoniously thought-out appearance with "
+                       "thin bezels and stylish stands, innovative functionality, and a friendly Android TV interface."
+                       "The model has a remote control connected via Bluetooth, "
+                       "and a lot of ports for creating a network of devices."
+                       "Access to online cinemas opens up almost limitless possibilities for the user."
+                       "Now TV is not only about watching, but also about exciting leisure time for the whole family."
+                       "Erase BezelsThe design of the display provides for a minimal frame",
+        "slug": "tv"
+
+    }
+]
+
+context_product = {'products': [
+    {
+        "name": "Macbook M1 2020",
+        "image": "https://www.blitzmicro.eu/12237-medium_default/AP-MYDC2TA.jpg",
+        "address": "http://127.0.0.1:8000/product/laptop/",
+        "price": "44000 UAH",
+        "button": "b_color_2",
+        "basket": ""
+
+    }, {
+        "name": "Canon EOS20000",
+        "image": "https://catalogapp.b-cdn.net/production/images/51/86/64/32/preview/e7e3d2a4-f261-4d0f-8a20-1b4c1dc541b7.jpg",
+        "address": "http://127.0.0.1:8000/product/camera/",
+        "price": "23000 UAH",
+        "button": "b_color",
+        "basket": "/basket"
+    }, {
+        "name": "MiTV 43'",
+        "image": "https://s.cdnshm.com/catalog/au/t/319174297/xiaomi-mi-tv-p1-55.jpg",
+        "address": "http://127.0.0.1:8000/product/tv/",
+        "price": "17000 UAH",
+        "button": "b_color",
+        "basket": "/basket"
+
+    }
+]}
 
 
-def homepage(request: HttpRequest):
-    context = {"object": Product.objects.all()}
-    return render(request, 'homepage.html', context)
+def homepage(request: HttpRequest) -> render:
+    return render(request, 'homepage.html', context_product)
 
 
-def client_page(request: HttpRequest):
-    if not request.user.is_authenticated:
-        return HttpResponseRedirect(reverse_lazy("login"))
-    return render(request, 'user_templates/client_page.html')
+def client_page(request: HttpRequest, id: str) -> render:
+    for name in context_info:
+        if name["id"] == id:
+            return render(request, 'client_page.html', name)
 
 
-def basket(request: HttpRequest):
+def basket(request: HttpRequest) -> render:
     return HttpResponse('Basket')
 
 
-def product(request: HttpRequest, item_name: str):
-    try:
-        item = Product.objects.get(slug=item_name)
-        return render(request, 'product_all.html', {'item': item})
-    except Product.DoesNotExist:
-        raise Http404
-
-
-def handle_not_found(request, exception):
-    return render(request, 'error_page.html')
-
-
-def login_view(request: HttpRequest):
-    if request.method == "POST":
-        username = request.POST["username"]
-        password = request.POST["password"]
-        user = authenticate(username=username, password=password)
-        if user is None:
-            return HttpResponseRedirect(reverse_lazy('login'))
-        login(request, user)
-        return HttpResponseRedirect(reverse_lazy("homepage"))
-    return render(request, "user_templates/login_page.html")
-
-
-def register_view(request: HttpRequest):
-    if request.method == "POST":
-        username = request.POST["username"]
-        if User.objects.filter(username=username):
-            context = {"message": "User exists"}
-            return render(request, "user_templates/register_page.html", context)
-
-        password1 = request.POST["password1"]
-        password2 = request.POST["password2"]
-        email = request.POST["email"]
-        first_name = request.POST["first_name"]
-        last_name = request.POST["second_name"]
-
-        if password1 == password2:
-            User.objects.create_user(username=username, password=password2,
-                                     email=email, first_name=first_name, last_name=last_name)
-            return HttpResponseRedirect(reverse_lazy("login"))
-
-    return render(request, "user_templates/register_page.html")
-
-
-def logout_view(request: HttpRequest):
-    logout(request)
-    return HttpResponseRedirect(reverse_lazy("homepage"))
+def product_all(request: HttpRequest, item_name: str) -> render:
+    for name in context:
+        if name["slug"] == item_name:
+            return render(request, 'product_all.html', name)
