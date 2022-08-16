@@ -33,7 +33,7 @@ class Migration(migrations.Migration):
                 ('slug', models.SlugField(max_length=32)),
                 ('description', models.TextField(blank=True)),
                 ('availability', models.BooleanField(null=True)),
-                ('cat', models.ForeignKey(null=True, on_delete=django.db.models.deletion.PROTECT, to='aplication.category')),
+                ('cat', models.ForeignKey(null=True, on_delete=django.db.models.deletion.PROTECT, to='products.category')),
             ],
         ),
     ]
