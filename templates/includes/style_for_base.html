@@ -1,0 +1,49 @@
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: lightgray;
+        }
+
+        .first_btn-group button {
+            background-color: #696969;
+            padding: 20px 44px;
+            border: 1px black;
+            color: white;
+            cursor: pointer;
+            float: top;
+        }
+
+        .first_btn-group button:hover {
+            background-color: #D3D3D3;
+        }
+
+        .second-btn-group button {
+            top: -50px;
+            background-color: #808080;
+            border: 1px black;
+            color: white;
+            padding: 15px 44px;
+            cursor: pointer;
+            float: left;
+        }
+
+        .second-btn-group button:not(:last-child) {
+            border-right: none
+        }
+
+        .second-btn-group:after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .second-btn-group button:hover {
+            background-color: #D3D3D3;
+        }
+
+
+    </style>

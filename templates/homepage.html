@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Electronic shop{% endblock %}
+
+{% block container %}
+    {#    <h1 style="color: #583305; text-align: center; height: 70px; width: 97%">Popular goods</h1>#}
+    {#    <hr color=brown>#}
+    {% include 'includes/style_for_homepage.html' %}
+
+
+    {% for item in object %}
+        <figure class="pass-photo">
+            <img src="{{ item.image }}"
+                 width="200" height="200" alt="photo"
+                 class="pass-photo">
+            <div style="text-align: center;"><a href="{% url 'product' item_name=item.slug %}">{{ item.name }}</a></div>
+            <div><h1 style="font-size:25px; text-align: center; color: saddlebrown">Price:</h1>
+                <h1 style="font-size: 17px; text-align: center ">{{ item.price }} UAH</h1></div>
+            {% if item.availability %}
+                <form action="/basket" target="_self">
+            {% endif %}
+            <div style="text-align: center;">
+                {% if item.availability %}
+                    <button class="b_color">Buy device</button>
+                {% else %}
+                    <button class="b_color_2">Not available</button>
+                {% endif %}
+            </div>
+            </form>
+        </figure>
+    {% endfor %}
+
+{% endblock %}

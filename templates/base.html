@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Electronic shop{% endblock %}</title>
+    {% include 'includes/style_for_base.html' %}
+</head>
+<body>
+<div class="first_btn-group" style="width: 100%">
+    <form action="http://127.0.0.1:8000/homepage" target="_self">
+        <button style="width: 100%">Electronic shop</button>
+    </form>
+</div>
+<div class="second-btn-group" style="width:100%">
+    <form action="{% url "basket" %}" target="_self">
+        <button style="width:33.33%">Basket</button>
+    </form>
+    {% if user.is_authenticated %}
+        <form action="{% url "client_page" %}" target="_self">
+            <button style="width:33.33%">Personal Area</button>
+        </form>
+    {% else %}
+        <form action="{% url "login" %}" target="_self">
+            <button style="width:33.33%">Login</button>
+        </form>
+    {% endif %}
+    </form>
+    {% if user.is_authenticated %}
+        <form action="{% url "logout" %}" target="_self">
+            <button style="width:33.33%">Logout</button>
+        </form>
+    {% else %}
+        <form action="{% url "register" %}" target="_self">
+            <button style="width:33.33%">Registration</button>
+        </form>
+    {% endif %}
+</div>
+<div class="container ">
+    {% block container %}{% endblock %}
+</div>
+</body>
+</html>
