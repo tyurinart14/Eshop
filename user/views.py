@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 def client_page(request: HttpRequest):
     if not request.user.is_authenticated:
         return HttpResponseRedirect(reverse_lazy("login"))
-    return render(request, 'user_templates/client_page.html')
+    return render(request, 'client_page.html')
 
 
 def login_view(request: HttpRequest):
@@ -20,7 +20,7 @@ def login_view(request: HttpRequest):
             return HttpResponseRedirect(reverse_lazy('login'))
         login(request, user)
         return HttpResponseRedirect(reverse_lazy("homepage"))
-    return render(request, "user_templates/login_page.html")
+    return render(request, "login_page.html")
 
 
 def register_view(request: HttpRequest):
@@ -28,7 +28,7 @@ def register_view(request: HttpRequest):
         username = request.POST["username"]
         if User.objects.filter(username=username):
             context = {"message": "User exists"}
-            return render(request, "user_templates/register_page.html", context)
+            return render(request, "register_page.html", context)
 
         password1 = request.POST["password1"]
         password2 = request.POST["password2"]
@@ -41,7 +41,7 @@ def register_view(request: HttpRequest):
                                      email=email, first_name=first_name, last_name=last_name)
             return HttpResponseRedirect(reverse_lazy("login"))
 
-    return render(request, "user_templates/register_page.html")
+    return render(request, "register_page.html")
 
 
 def logout_view(request: HttpRequest):
