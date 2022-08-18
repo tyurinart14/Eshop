@@ -1,8 +1,8 @@
 from django.http import HttpRequest, HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse_lazy, reverse
-from django.contrib.auth import authenticate, login, logout
-from user.forms import RegisterForm
+from django.contrib.auth import logout, login
+from user.forms import RegisterForm, LoginForm
 
 
 def client_page(request: HttpRequest):
@@ -13,14 +13,13 @@ def client_page(request: HttpRequest):
 
 def login_view(request: HttpRequest):
     if request.method == "POST":
-        username = request.POST["username"]
-        password = request.POST["password"]
-        user = authenticate(username=username, password=password)
-        if user is None:
-            return HttpResponseRedirect(reverse_lazy('login'))
-        login(request, user)
-        return HttpResponseRedirect(reverse_lazy("homepage"))
-    return render(request, "login_page.html")
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            login(request, form.user)
+            return HttpResponseRedirect(reverse("homepage"))
+    else:
+        form = LoginForm()
+    return render(request, "login_page.html", {"form": form})
 
 
 def register_view(request: HttpRequest):

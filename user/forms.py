@@ -1,4 +1,5 @@
 from django import forms
+from django.contrib.auth import authenticate
 from django.core.exceptions import ValidationError
 from user.models import UserModel
 
@@ -33,3 +34,20 @@ class RegisterForm(forms.Form):
         password = self.cleaned_data["password1"]
         UserModel.objects.create_user(username=username, first_name=first_name,
                                       email=email, last_name=last_name, password=password)
+
+
+class LoginForm(forms.Form):
+    username = forms.CharField(max_length=15, label="Username")
+    password = forms.CharField(max_length=25, label="Password", widget=forms.PasswordInput)
+
+    def __int__(self, *args, **kwargs):
+        self.user = None
+        super().__init__(*args, **kwargs)
+
+    def clean(self):
+        username = self.cleaned_data["username"]
+        password = self.cleaned_data["password"]
+        self.user = authenticate(username=username, password=password)
+
+        if self.user is None:
+            raise ValidationError("Data entered incorrectly")
