@@ -1,14 +1,20 @@
+from django.contrib.auth.decorators import login_required
 from django.http import HttpRequest, HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse_lazy, reverse
 from django.contrib.auth import logout, login
-from user.forms import RegisterForm, LoginForm
+from user.forms import RegisterForm, LoginForm, ClientPageEditForm
 
 
 def client_page(request: HttpRequest):
-    if not request.user.is_authenticated:
-        return HttpResponseRedirect(reverse_lazy("login"))
-    return render(request, 'client_page.html')
+    if request.method == "POST":
+        client_form = ClientPageEditForm(request.POST)
+        if client_form.is_valid():
+            client_form.save(request.user)
+            return HttpResponseRedirect(reverse("client_page"))
+    else:
+        client_form = ClientPageEditForm()
+    return render(request, "client_page.html", {"client_form": client_form})
 
 
 def login_view(request: HttpRequest):
