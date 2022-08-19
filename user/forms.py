@@ -57,6 +57,7 @@ class ClientPageEditForm(forms.Form):
     first_name = forms.CharField(max_length=15, label="New first_name")
     last_name = forms.CharField(max_length=15, label="New second_name")
     email = forms.EmailField(label="New email")
+    username = forms.CharField(max_length=15, label="New username")
 
     def save(self, user: UserModel):
         UserModel.objects.filter(pk=user.pk).update(**self.cleaned_data)
