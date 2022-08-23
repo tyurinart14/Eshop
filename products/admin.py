@@ -1,6 +1,7 @@
 from django.contrib import admin
 from products.models import Product
 from products.models import Category
+from user.models import UserModel
 
 
 @admin.register(Product)
@@ -19,3 +20,8 @@ class CategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {
         "slug": ["name"],
     }
+
+
+@admin.register(UserModel)
+class UserModelAdmin(admin.ModelAdmin):
+    list_display = "username", "email"

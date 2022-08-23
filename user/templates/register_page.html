@@ -3,19 +3,7 @@
 {% block container %}
     <form style="text-align: center" method="post">
         {% csrf_token %}
-
-        <div>Enter your username</div>
-        <input id="username" name="username" type="text">
-        <div>Enter your password</div>
-        <input id="password1" name="password1" type="password">
-        <div>Enter your password again</div>
-        <input id="password2" name="password2" type="password">
-        <div>Enter your email</div>
-        <input id="email" name="email" type="email">
-        <div>Enter first name</div>
-        <input id="first_name" name="first_name" type="text">
-        <div>Enter your second name</div>
-        <input id="second_name" name="second_name" type="text">
-        <div><input type="submit"></div>
+        {{ form.as_p }}
+        <div><input type="submit" value="Register"></div>
     </form>
 {% endblock %}
