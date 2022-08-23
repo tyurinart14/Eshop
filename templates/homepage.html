@@ -5,12 +5,12 @@
     {% include 'includes/style_for_homepage.html' %}
 
 
-    {% for item in object %}
+    {% for item in object_list %}
         <figure class="pass-photo">
             <img src="{{ item.image }}"
                  width="200" height="200" alt="photo"
                  class="pass-photo">
-            <div style="text-align: center;"><a href="{% url 'product' item_name=item.slug %}">{{ item.name }}</a></div>
+            <div style="text-align: center;"><a href="{% url 'product' slug=item.slug %}">{{ item.name }}</a></div>
             <div><h1 style="font-size:25px; text-align: center; color: saddlebrown">Price:</h1>
                 <h1 style="font-size: 17px; text-align: center ">{{ item.price }} UAH</h1></div>
             {% if item.availability %}
