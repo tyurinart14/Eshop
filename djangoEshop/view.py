@@ -5,11 +5,6 @@ from django.views.generic import ListView
 from products.models import Product
 
 
-# def homepage(request: HttpRequest):
-#     context = {"object": Product.objects.all()}
-#     return render(request, 'homepage.html', context)
-
-
 class HomepageView(ListView):
     model = Product
     template_name = "homepage.html"
