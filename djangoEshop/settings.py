@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'user.apps.UserConfig',
+
     'products.apps.AplicationConfig'
 ]
 
@@ -66,6 +67,8 @@ TEMPLATES = [
         },
     },
 ]
+
+LOGIN_REDIRECT_URL = "/"
 
 WSGI_APPLICATION = 'djangoEshop.wsgi.application'
 

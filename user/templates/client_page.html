@@ -7,14 +7,16 @@
                              height="400px" width="400px" alt="picture" align="left">
         {% csrf_token %}
         <h1 style="width: 85%; height: 60px; color: #272727; position: relative; left: 10%">
-            Username: {{ user.username }}</h1>
+            Username: {{ object.username }}</h1>
         <h1 style="width: 85%; height: 60px; color: #272727; position: relative; left: 10%">First
-            name: {{ user.first_name }}</h1>
+            name: {{ object.first_name }}</h1>
         <h1 style="width: 85%; height: 60px; color: #272727; position: relative; left: 10%">Last
-            name: {{ user.last_name }}</h1>
-        <h1 style="width: 85%; height: 60px; color: #272727; position: relative; left: 10%">Mail: {{ user.email }}</h1>
+            name: {{ object.last_name }}</h1>
+        <h1 style="width: 85%; height: 60px; color: #272727; position: relative; left: 10%">
+            Mail: {{ object.email }}</h1>
         <div>Change profile data</div>
-        {{ client_form.as_table }}
-        <div><input type="submit" value="Enter new data"></div>
+    </form>
+    <form action="{% url "update_page" slug=user.username %}">
+        <button>Edit new data</button>
     </form>
 {% endblock %}

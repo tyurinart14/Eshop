@@ -16,7 +16,7 @@
         <button style="width:33.33%">Basket</button>
     </form>
     {% if user.is_authenticated %}
-        <form action="{% url "client_page" %}" target="_self">
+        <form action="{% url "client_page" slug=user.username %}" target="_self">
             <button style="width:33.33%">Personal Area</button>
         </form>
     {% else %}
