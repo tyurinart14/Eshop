@@ -24,4 +24,4 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(UserModel)
 class UserModelAdmin(admin.ModelAdmin):
-    list_display = "username", "email"
+    list_display = "username", "email", "wallet"

@@ -14,4 +14,4 @@ class CategoryView(ListView):
 
 class ProductDetailView(DetailView):
     model = Product
-    template_name = "product_all.html"
+    template_name = "product_detail.html"
