@@ -41,7 +41,7 @@ INSTALLED_APPS = [
 
     'products.apps.AplicationConfig',
     'cart',
-    'orders'
+    'orders',
 ]
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
@@ -61,7 +61,7 @@ ROOT_URLCONF = 'djangoEshop.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR / 'templates',)],
+        'DIRS': [os.path.join(BASE_DIR / 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

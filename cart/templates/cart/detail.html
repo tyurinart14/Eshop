@@ -42,7 +42,8 @@
     <form action="{% url 'homepage' %}" target="_self">
         <button class="b_color">Continue shopping</button>
     </form>
-        <button class="b_color">Buy</button>
+    <form action="{% url 'create_order' %}" target="_self">
+        <button class="b_color">Checkout</button>
     </form>
 
 {% endblock %}
