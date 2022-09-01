@@ -19,6 +19,8 @@
             <input class="b_color" type="submit" value="Add to basket">
         </form>
     {% else %}
+        <p style="margin-top:50px; width: 85%; font-size: 24px; height: 30px; color: black; position: relative; left: 10%; ">
+            Price: {{ product.price }} UAH</p>
         <p style="margin-top:50px; width: 85%; font-size: 24px; color: red; position: relative; left: 10%">
             The product is out of stock</p>
     {% endif %}
