@@ -12,7 +12,7 @@
     </form>
 </div>
 <div class="second-btn-group" style="width:100%">
-    <form action="{% url "basket" %}" target="_self">
+    <form action="{% url "cart_detail" %}" target="_self">
         <button style="width:33.33%">Basket</button>
     </form>
     {% if user.is_authenticated %}

@@ -11,7 +11,7 @@ class HomepageView(ListView):
 
 
 def basket(request: HttpRequest):
-    return HttpResponse('Basket')
+    return render(request, 'cart/detail.html')
 
 
 def handle_not_found(request, exception):

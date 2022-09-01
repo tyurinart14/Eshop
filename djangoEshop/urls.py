@@ -9,7 +9,8 @@ urlpatterns = [
     path('homepage/', view.HomepageView.as_view()),
     path('basket', view.basket, name="basket"),
     path('', include("products.urls")),
-    path('', include('user.urls'))
+    path('cart/', include('user.urls')),
+    path('', include('cart.urls'))
 ]
 
 handler404 = "djangoEshop.view.handle_not_found"

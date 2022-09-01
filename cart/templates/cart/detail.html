@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}Shopping basket{% endblock %}
+{% block container %}
+    {% include 'includes/style_for_table_cart.html' %}
+    {% include 'includes/style_for_homepage.html' %}
+    <h1 style="width: 97%; height: 70px; color: #272727; position: relative; left: 38%">
+        Your shopping basket</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Image</th>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Remove</th>
+            <th>Unit price</th>
+            <th>Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in cart %}
+            {% with product=item.product %}
+                <tr>
+                    <td>
+                        <a href="{{ product.get_absolute_url }}">
+                        </a>
+                    </td>
+                    <td>{{ product.name }}</td>
+                    <td>{{ item.quantity }}</td>
+                    <td><a href="{% url "cart_remove" product.id %}">Remove</a></td>
+                    <td class="num">{{ item.price }} UAH</td>
+                    <td class="num">{{ item.total_price }} UAH</td>
+                </tr>
+            {% endwith %}
+        {% endfor %}
+        <tr class="total">
+            <td>Total</td>
+            <td colspan="4"></td>
+            <td class="num">{{ cart.get_total_price }} UAH</td>
+        </tr>
+        </tbody>
+    </table>
+    <form action="{% url 'homepage' %}" target="_self">
+        <button class="b_color">Continue shopping</button>
+    </form>
+        <button class="b_color">Buy</button>
+    </form>
+
+{% endblock %}

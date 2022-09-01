@@ -6,7 +6,7 @@ from user.models import UserModel
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = "name", "slug", "cat_id"
+    list_display = "name", "slug", "price", "amount"
     list_display_links = ["name"]
     prepopulated_fields = {
         "slug": ["name"],

@@ -3,15 +3,20 @@
 {% block container %}
     {% include "includes/style_for_homepage.html" %}
 
-    <h1 style="width: 97%; height: 70px; color: saddlebrown; position: relative; left: 11%">{{ object.name }}</h1>
-    <img src="{{ object.image2 }}"
+    <h1 style="width: 97%; height: 70px; color: saddlebrown; position: relative; left: 11%">{{ product.name }}</h1>
+    <img src="{{ product.image2 }}"
          height="400px" width="600px" alt="picture" align="left">
-    <p style="font-size: 24px; width: 85%; color: saddlebrown; position: relative; left: 10%">{{ object.description }}</p>
-    {% if object.amount > 0 %}
+    <p style="font-size: 24px; width: 85%; color: saddlebrown; position: relative; left: 10%">{{ product.description }}</p>
+    {% if product.amount > 0 %}
         <p style="margin-top:50px; width: 85%; font-size: 24px; height: 30px; color: black; position: relative; left: 10%; ">
-            {{ object.amount }} units available</p>
-        <form style="position: fixed; left: 51%" action="/basket" target="_self">
-            <button class="b_color">Buy device</button>
+            {{ product.amount }} units available</p>
+        <p style="margin-top:0px; width: 85%; font-size: 24px; height: 30px; color: black; position: relative; left: 10%; ">
+            Price: {{ product.price }} UAH</p>
+        <form style="margin-top:0px; width: 85%; font-size: 24px; height: 30px; color: black; position: relative; left: 10%; "
+              action="{% url "cart_add" product.id %}" method="post">
+            {{ cart_product_form }}
+            {% csrf_token %}
+            <input class="b_color" type="submit" value="Add to basket">
         </form>
     {% else %}
         <p style="margin-top:50px; width: 85%; font-size: 24px; color: red; position: relative; left: 10%">

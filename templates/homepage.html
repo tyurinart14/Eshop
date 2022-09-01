@@ -10,18 +10,9 @@
             <img src="{{ item.image }}"
                  width="200" height="200" alt="photo"
                  class="pass-photo">
-            <div style="text-align: center;"><a href="{% url 'product' slug=item.slug %}">{{ item.name }}</a></div>
-            <div><h1 style="font-size:25px; text-align: center; color: saddlebrown">Price:</h1>
-                <h1 style="font-size: 17px; text-align: center ">{{ item.price }} UAH</h1></div>
-            {% if item.availability %}
-                <form action="/basket" target="_self">
-            {% endif %}
+                <form action="{% url 'product' slug=item.slug num=item.pk %}" target="_self">
             <div style="text-align: center;">
-                {% if item.availability %}
-                    <button class="b_color">Buy device</button>
-                {% else %}
-                    <button class="b_color_2">Not available</button>
-                {% endif %}
+                    <button class="b_color">{{ item.name}}</button>
             </div>
             </form>
         </figure>

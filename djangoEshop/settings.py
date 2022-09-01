@@ -26,6 +26,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+
+CART_SESSION_ID = "cart"
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,8 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'user.apps.UserConfig',
 
-    'products.apps.AplicationConfig'
+    'products.apps.AplicationConfig',
+    'cart'
 ]
+
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
