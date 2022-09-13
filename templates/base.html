@@ -16,15 +16,20 @@
         <button style="width:33.33%">Basket</button>
     </form>
     {% if user.is_authenticated %}
-        <form action="{% url "client_page" slug=user.username %}" target="_self">
-            <button style="width:33.33%">Personal Area</button>
-        </form>
+        {% if user.is_staff %}
+            <form action="{% url "add_product" %}" target="_self">
+                <button style="width:33.33%">Add product</button>
+            </form>
+        {% else %}
+            <form action="{% url "client_page" slug=user.username %}" target="_self">
+                <button style="width:33.33%">Personal Area</button>
+            </form>
+        {% endif %}
     {% else %}
         <form action="{% url "login" %}" target="_self">
             <button style="width:33.33%">Login</button>
         </form>
     {% endif %}
-    </form>
     {% if user.is_authenticated %}
         <form action="{% url "logout" %}" target="_self">
             <button style="width:33.33%">Logout</button>

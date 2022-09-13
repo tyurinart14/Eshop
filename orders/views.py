@@ -2,6 +2,7 @@ from django.shortcuts import render
 from orders.models import OrderItem
 from orders.forms import OrdersCreateForm
 from cart.cart import Cart
+from user.models import UserModel
 
 
 def create_new_order(request):

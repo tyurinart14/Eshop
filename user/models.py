@@ -4,7 +4,7 @@ from django.urls import reverse
 
 
 class UserModel(AbstractUser):
-    wallet = models.IntegerField()
+    wallet = models.IntegerField(default=20000)
 
     class Meta:
         db_table = "auth_user"
