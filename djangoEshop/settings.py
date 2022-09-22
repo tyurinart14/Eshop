@@ -37,11 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'user.apps.UserConfig',
 
-    'products.apps.AplicationConfig',
+    'user.apps.UserConfig',
+    'products.apps.ProductsConfig',
+    'orders.apps.OrdersConfig',
     'cart',
-    'orders',
+
 ]
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True

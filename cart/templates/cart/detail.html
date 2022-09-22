@@ -34,11 +34,16 @@
         </tr>
         </tbody>
     </table>
+    <div class="container-buttons">
     <form action="{% url 'homepage' %}" target="_self">
         <button class="b_color">Continue shopping</button>
     </form>
     <form action="{% url 'create_order' %}" target="_self">
         <button class="b_color">Checkout</button>
     </form>
+    <form action="{% url 'orders_history' %}" target="_self">
+        <button class="b_color">Check orders history</button>
+    </form>
+    </div>
 
 {% endblock %}

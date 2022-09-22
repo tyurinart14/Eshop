@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}Shopping basket{% endblock %}
+{% block container %}
+    {% include 'includes/style_for_table_cart.html' %}
+    {% include 'includes/style_for_homepage.html' %}
+
+    <h1 style="width: 97%; height: 70px; color: #272727; position: relative; left: 43%">
+        Your orders</h1>
+    <table class="table" style="margin-top: -1.5%">
+        <thead>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Unit price</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for prod in user_order_items %}
+            <tr>
+                <td>{{ prod.product.name }}</td>
+                <td>{{ prod.quantity }}</td>
+                <td>{{ prod.price }} UAH</td>
+                <td>
+                    <form style="text-align: center" action="" target="_self">
+                        <button class="b_color">Return the goods</button>
+                    </form>
+                </td>
+            </tr>
+
+        {% endfor %}
+
+        </tbody>
+    </table>
+
+{% endblock %}
