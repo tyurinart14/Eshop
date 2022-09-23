@@ -12,9 +12,21 @@
     </form>
 </div>
 <div class="second-btn-group" style="width:100%">
-    <form action="{% url "cart_detail" %}" target="_self">
-        <button style="width:33.33%">Basket</button>
-    </form>
+    {% if user.is_authenticated %}
+        {% if user.is_staff %}
+            <form action="{% url "returns_list" %}" target="_self">
+                <button style="width:33.33%">Returns of goods</button>
+            </form>
+        {% else %}
+            <form action="{% url "cart_detail" %}" target="_self">
+                <button style="width:33.33%">Basket</button>
+            </form>
+        {% endif %}
+    {% else %}
+        <form action="{% url "cart_detail" %}" target="_self">
+            <button style="width:33.33%">Basket</button>
+        </form>
+    {% endif %}
     {% if user.is_authenticated %}
         {% if user.is_staff %}
             <form action="{% url "add_product" %}" target="_self">

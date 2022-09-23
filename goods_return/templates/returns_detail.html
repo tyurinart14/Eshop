@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}Shopping basket{% endblock %}
+{% block container %}
+    {% include 'includes/style_for_table_cart.html' %}
+    {% include 'includes/style_for_homepage.html' %}
+    <table class="table" style="margin-top: -1.5%">
+        <thead>
+        <tr>
+            <th>Username</th>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Unit price</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in object_list %}
+            <tr>
+                <td>{{ item.user.username }}</td>
+                <td>{{ item.product.product.name }}</td>
+                <td>{{ item.product.quantity }}</td>
+                <td>{{ item.product.product.price }} UAH</td>
+                <td>
+                    <div class="container-buttons-2">
+                        <form style="text-align: center" action="{% url "refusal_order" order_id=item.pk %}"
+                              target="_self">
+                            <button style="" class="b_color_2">Refuse</button>
+                        </form>
+                        <form style="text-align: center" action="{% url "confirm_return" order_id=item.pk %}"
+                              target="_self">
+                            <button class="b_color_3">Confirm</button>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

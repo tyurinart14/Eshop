@@ -12,6 +12,7 @@
             <th>Product</th>
             <th>Quantity</th>
             <th>Unit price</th>
+            <th>Return Status</th>
             <th></th>
         </tr>
         </thead>
@@ -21,15 +22,31 @@
                 <td>{{ prod.product.name }}</td>
                 <td>{{ prod.quantity }}</td>
                 <td>{{ prod.price }} UAH</td>
+                {% if prod.return_status is True %}
+                    <td>Return confirmed</td>
+                {% elif prod.return_status is False %}
+                    <td>Refusal to return</td>
+                {% else %}
+                    <td>In the process</td>
+                {% endif %}
                 <td>
-                    <form style="text-align: center" action="" target="_self">
-                        <button class="b_color">Return the goods</button>
-                    </form>
+                    {% if prod.return_status is True %}
+                        <form style="text-align: center" action="">
+                            <button class="b_color_3">Return confirmed</button>
+                        </form>
+                    {% elif prod.return_status is False %}
+                        <form style="text-align: center" action="">
+                            <button class="b_color_2">Refusal to return</button>
+                        </form>
+                    {% else %}
+                        <form style="text-align: center" action="{% url "create_new_return" order_id=prod.pk %}"
+                              target="_self">
+                            <button class="b_color">Return the goods</button>
+                        </form>
+                    {% endif %}
                 </td>
             </tr>
-
         {% endfor %}
-
         </tbody>
     </table>
 
