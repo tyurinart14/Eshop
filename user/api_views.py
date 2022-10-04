@@ -1,6 +1,6 @@
 from .models import UserModel
 from .serializer import UserSerializer
-from rest_framework.generics import ListCreateAPIView, RetrieveUpdateAPIView
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 
 
 class UserListCreateAPIView(ListCreateAPIView):
@@ -8,7 +8,7 @@ class UserListCreateAPIView(ListCreateAPIView):
     queryset = UserModel.objects.all()
 
 
-class UserDetailUpdateAPIView(RetrieveUpdateAPIView):
+class UserDetailUpdateAPIView(RetrieveUpdateDestroyAPIView):
     serializer_class = UserSerializer
     lookup_field = 'username'
     queryset = UserModel.objects.all()
