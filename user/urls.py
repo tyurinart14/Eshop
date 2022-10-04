@@ -16,6 +16,6 @@ urlpatterns = [
 
     path('api/user-list/', api_views.UserListCreateAPIView.as_view(),
          name="list-create-user"),
-    path('api/detail-update-user/<int:id>/', api_views.UserDetailUpdateAPIView.as_view(),
+    path('api/detail-update-user/<username>/', api_views.UserDetailUpdateAPIView.as_view(),
          name="detail-update-user")
 ]

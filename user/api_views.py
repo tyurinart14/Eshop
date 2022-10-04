@@ -10,9 +10,5 @@ class UserListCreateAPIView(ListCreateAPIView):
 
 class UserDetailUpdateAPIView(RetrieveUpdateAPIView):
     serializer_class = UserSerializer
-    model = serializer_class.Meta.model
-
-    def get_queryset(self):
-        user_id = self.kwargs['id']
-        queryset = self.model.objects.get(id=user_id)
-        return queryset
+    lookup_field = 'username'
+    queryset = UserModel.objects.all()
