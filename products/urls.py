@@ -12,7 +12,7 @@ urlpatterns = [
          name="change_product_info"),
 
 
-    path('api/product-list/', api_views.ProductAPIView.as_view(),
+    path('api/product-list/', api_views.ProductListAPIView.as_view(),
          name="api-product-list"),
     path('api/category-list/<int:num>/', api_views.CategoryAPIView.as_view(),
          name="api-category-view"),
