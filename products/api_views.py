@@ -1,6 +1,7 @@
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 from .serializer import ProductSerializer, CategorySerializer
 from .models import Product, Category
+from rest_framework import permissions
 
 
 class CategoryAPIView(ListCreateAPIView):
@@ -21,3 +22,4 @@ class ProductListAPIView(ListCreateAPIView):
 class ProductRetrieveUpdateAPIView(RetrieveUpdateDestroyAPIView):
     serializer_class = ProductSerializer
     queryset = Product.objects.all()
+    permission_classes = [permissions.IsAdminUser]
