@@ -73,7 +73,7 @@
 </style>
 
 <div class="btn-group" style="width:100%">
-    <form action="http://127.0.0.1:8000/homepage" target="_self">
+    <form action="{% url "homepage" %}" target="_self">
         <button style="width:25%">All devices</button>
     </form>
     <form action="{% url 'category' number=1 %}" target="_self">
