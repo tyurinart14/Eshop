@@ -12,7 +12,7 @@
         <p style="margin-top:0; width: 85%; font-size: 24px; height: 30px; color: black; position: relative; left: 10%; ">
             Price: {{ product.price }} UAH</p>
         <form style="margin-top:0; width: 85%; font-size: 24px; height: 30px; color: black; position: relative; left: 10%; "
-              action="{% url "products: change_product_info" slug=product.slug %}">
+              action="{% url "products:change_product_info" pk=product.pk %}">
             <input class="b_color" type="submit" value="Change info">
         </form>
     {% else %}
