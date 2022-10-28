@@ -10,7 +10,7 @@
             <img src="{{ item.image }}"
                  width="200" height="200" alt="photo"
                  class="pass-photo">
-                <form action="{% url 'product' slug=item.slug num=item.pk %}" target="_self">
+                <form action="{% url 'products:product' slug=item.slug num=item.pk %}" target="_self">
             <div style="text-align: center;">
                     <button class="b_color">{{ item.name}}</button>
             </div>

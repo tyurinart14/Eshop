@@ -18,7 +18,7 @@
             Wallet balance: {{ object.wallet }} UAH</h1>
         <div>Change profile data</div>
     </form>
-    <form action="{% url "update_page" slug=user.username %}">
+    <form action="{% url "user:update_page" slug=usermodel.username %}">
         <button>Edit new data</button>
     </form>
 {% endblock %}

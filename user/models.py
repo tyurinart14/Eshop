@@ -12,4 +12,4 @@ class UserModel(AbstractUser):
         verbose_name_plural = "users"
 
     def get_absolute_url(self):
-        return reverse("user:user", kwargs={"slug": self.username})
+        return reverse("user:login")

@@ -1,7 +1,10 @@
 from django.shortcuts import get_object_or_404, render
 from django.views.generic import ListView, UpdateView, CreateView
+from django.contrib.auth.mixins import UserPassesTestMixin
+import user.models
 from products.models import Product
 from cart.forms import CartAddProductForm
+from user.models import UserModel
 
 
 class CategoryView(ListView):
@@ -23,13 +26,19 @@ def product_detail(request, num, slug):
                                                    'cart_product_form': cart_product_form})
 
 
-class CreateNewProduct(CreateView):
+class CreateNewProduct(UserPassesTestMixin, CreateView):
     model = Product
     fields = ['name', 'image', 'image2', 'price', 'amount', 'slug', 'description', 'availability', 'cat']
     template_name = 'product_add.html'
 
+    def test_func(self):
+        return self.request.user.is_staff
 
-class UpdateProductData(UpdateView):
+
+class UpdateProductData(UserPassesTestMixin, UpdateView):
     model = Product
     fields = ['name', 'image', 'image2', 'price', 'amount', 'slug', 'description', 'availability', 'cat']
     template_name = 'product_add.html'
+
+    def test_func(self):
+        return self.request.user.is_staff

@@ -76,13 +76,13 @@
     <form action="{% url "homepage" %}" target="_self">
         <button style="width:25%">All devices</button>
     </form>
-    <form action="{% url 'category' number=1 %}" target="_self">
+    <form action="{% url 'products:category' number=1 %}" target="_self">
         <button style="width:25%">Laptops</button>
     </form>
-    <form action="{% url 'category' number=2 %}" target="_self">
+    <form action="{% url 'products:category' number=2 %}" target="_self">
         <button style="width:25%">Cameras</button>
     </form>
-    <form action="{% url 'category' number=3 %}" target="_self">
+    <form action="{% url 'products:category' number=3 %}" target="_self">
         <button style="width:25%">TVs</button>
     </form>
 </div>

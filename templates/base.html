@@ -29,25 +29,25 @@
     {% endif %}
     {% if user.is_authenticated %}
         {% if user.is_staff %}
-            <form action="{% url "add_product" %}" target="_self">
+            <form action="{% url "products:add_product" %}" target="_self">
                 <button style="width:33.33%">Add product</button>
             </form>
         {% else %}
-            <form action="{% url "client_page" slug=user.username %}" target="_self">
+            <form action="{% url "user:client_page" slug=user.username %}" target="_self">
                 <button style="width:33.33%">Personal Area</button>
             </form>
         {% endif %}
     {% else %}
-        <form action="{% url "login" %}" target="_self">
+        <form action="{% url "user:login" %}" target="_self">
             <button style="width:33.33%">Login</button>
         </form>
     {% endif %}
     {% if user.is_authenticated %}
-        <form action="{% url "logout" %}" target="_self">
+        <form action="{% url "user:logout" %}" target="_self">
             <button style="width:33.33%">Logout</button>
         </form>
     {% else %}
-        <form action="{% url "register" %}" target="_self">
+        <form action="{% url "user:register" %}" target="_self">
             <button style="width:33.33%">Registration</button>
         </form>
     {% endif %}
