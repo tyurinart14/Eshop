@@ -1,0 +1,182 @@
+[
+  {
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+      "name": "Laptop Asus X415FA",
+      "image": "https://lh3.googleusercontent.com/Xe6hoi8RLXikJHeLGhQ3ZpSaVsqjEw-YC4lykOtqeBjNiZ4I856BpBCXhr8d2M6CCtTU8nTpmkta0cR8a70UWiNiUG9vClWRxbOoKGLlbednMhpF0NpolJoJhL4yoCofpUdFh477r-bZQDMnn7qC6bIWaLkPP96R5EACa1iPK6Fq73W2osIZjnf91Z1mQlUTlPcMrwVOpeKnxedVJiG0RQk9arj483VCfw5XKefBn6UFTygK1-3W0XW0MP0P2Bnxjp00mpB0jZ-hg4TPuUiVN2DAgfPKtMYfZWS6c9hcZDq_zcBO3dx8JBpM3wEgDH7ppaQiFZWrxLKpj5SZO8rhSskw-nMDEFqllgKt4x_v_tZerigMCjvrNwiwOIVTbOcxAynWX6ll21IISqljcRBU1Y9_Y0U5DDPUMHCbUXec19glYazkEHmd4eUDul0uscav6BPikL_KVXFOlFrev5sAX5X8_wfe0y10Eps62lNtVULRpoehGPkf3ZaCV_tYnCVYKUuVXBcFJY_xChqYQnwddLBCvfj1UYEjDA2RBsKnaCF8jfIfaeGX_znu3qXX2OVOXwH2DGu5BzHBEZe7hAgpwxyMt0hrqpI3Ka8VeT9CycIZT0UHcJghsmImXDQLlnIXAlMgrLwfNOEC_uc7svISwIT0Z-IgFbR_dKxQZoVIJ0KZNJk13vm4CqMYmpKmaHn2uAbbhzR_r_1hkqCiurzqVGiKG9Jd5lrboLKUAMTXx5_oiX2qsja3Dcblv-NWGDx0TQU9RwIVh1x1HMbUI1EECCdOZU4=s500-no?authuser=0",
+      "image2": "https://cdn.comfy.ua/media/x/textimg/1903427/img_1.jpg",
+      "price": 19800,
+      "amount": 0,
+      "slug": "laptop-asus-x415fa",
+      "description": "The ASUS VivoBook series is a great multimedia laptop. Equipped with an Intel processor, it can handle tasks with ease. The exclusive SonicMaster audio technology delivers audio quality unparalleled in mobile computing.\r\nASUS TruLife Video technology optimizes video sharpness and contrast at the individual pixel level for more accurate hue reproduction and improved overall picture quality.",
+      "availability": false,
+      "cat": 1
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+      "name": "ATRIX Tiktoker 6 20MP Pink",
+      "image": "https://lh3.googleusercontent.com/3ebRnM4RG0qU_P01RyjwU74gprJpRKEfmGFFXEw6f9zaCosxEYsojI-0q5WxZekEvaKKGhOCBOXv_vAlPxbNl8GF1YiQLJz6W-9_t8LQ9ArdZRJ7ovO8HxLP1aN3SJ-iXyFu1D2-CPOvuLM-G5wNm6U7kNXUNNBWFQWWHBqTEpjGJvHwi5z6ERFzVeRYDBvxPDQLae4zC4tY04Esaaww-tSFZrMzbTHiQpUR7HbnvwA52T_rTONiU7bpLIOo0Fn1w3_14aWfrkySN2Bq8dV5ZQiTX7WSig0xrZaCPZSjCosEJ1JU5cRud3q6XYPkiIvPnnBoOp4i8Lm869fizR6tae7t6NfoNcmwgoxGvc1MG8SKqHlJknA8vQ2C4KQX6RpOsDijVswJm6b9OcpwKPQ5yBYLtrw45ed2odZzlv8nLKAmqMacrpv3UU4hAtV5YJzFO2dFeiLPA1zH-dCs5slAQRq0RMdChFbWrjB2urc511EKMgLMzYMm--UR4z4nk0is6mm2gW0jNcPtrXQxQqjBC0PDB13yZi-EF2lXeKAhzt6gij3RJEbLdfrq6fqBTRbgKTI8tqUQIdO7cgfRE0lmQDlKf3TwDhU7wYueeKm3iz4v8w5Xj5zBt0Cly4Qjxcv2zNA0hfFG3jR7X33FGyTe_dxF2aoZWHf-U03aDKTzqt5ONELBaCZagFrRcaV_JEHsCb0IE8D6mm63fP9WjpB2sNby_Mi-zc3P5i90Q-ZvlXnUypOEN2xrt878ESegXCZk3X_BuWpkQxW3nIaMXTkGfKukkl4=s500-no?authuser=0",
+      "image2": "https://content2.rozetka.com.ua/goods/images/original/148497978.jpg",
+      "price": 2000,
+      "amount": 3,
+      "slug": "atrix-tiktoker-6-20mp-pink",
+      "description": "The Atrix Tiktoker 6 20mp 1080p is a high quality digital camera designed specifically for use by children. Atrix Tiktoker 6 20mp 1080p equipped with 3x zoom camera. Digital children's camera Atrix Tiktoker 6 20mp 1080p, saves photo and video files to a MiniSD memory card.\r\nAtrix Tiktoker 6 20mp 1080p will definitely be the most desired gift that will take the child into a bright and colorful world. Atrix Tiktoker 6 20mp 1080p, develops the creative and creative abilities of the child!",
+      "availability": true,
+      "cat": 2
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 8,
+    "fields": {
+      "name": "TV Philips 55OLED706",
+      "image": "https://lh3.googleusercontent.com/ujgFZPQEL7jbmHSpRSyv3hOVXmBtnJW74ykQ3v4OgSAC9_vBnx5QZYI37x62RznqoV-hk0Gn3ufDsrSdGEITuU93iNkGQ9z0KEnWuI0Itg6i89L-4eKI-hQiHiKom0AhCT6MrxGaWdx0BgbUK5SyzfCnjZMopiIP_3OPDy6qmug4_VWqu_NOHADVu8GhKhEeddQCdoa4r72UfI4wI-75KMwLbDCuNpV2WdCbMbP-C0XN48-FQxzHBxmeZ4vVu2OYJprq9NmR-3Zzxzd5m6AlbybCgYhju18zAxXzjhg5Ibd3Qi01dWrvqdmdJJWs_jSocXUya51-ZpvEi6Xa8k_QO3SXQiQyxt-ys-lvswgKxHgtLq74SX_zwnmQk8D05isNyFZOUStaAn9URa0upl9hrnqqEORqrcs_zDKdbJP1UlezV2KgrgVB3X00slAKaY0-sOhjIWv_saTAQhyl1E2ymazNlZkNncneL74Gn7aM-5Wu24AYfwZEb_3XuFtxjgc4uHzIgWZeQlxyENPKJrXNwtW26aHA8kF13uwPxIvqkFlpSKejsOdoncXyqQ40h_VhKGr69RMzW7kokBGM0o9W88RcnEucTjREUiZGVuyH9LQJcbipHY9H9oA4CEkd3ib3PGQQBYHECUyIrjl0GprGxi3xuADAy0pxbkIN5wkDj9RspAyfpLvfkIW60dySYth31MMVWFjv6T7QBR5WjaMtcozyEP8iBDOLGNDNNS1kRLQgbNfrOumpzNhE4JYk0YEqKXodYsoNBZRVckNKam6NjLDG5eY=s500-no?authuser=0",
+      "image2": "https://i0.wp.com/allhomecinema.com/wp-content/uploads/2021/01/1611830762_Philips-also-brings-cheaper-OLED706-and-OLED705-TVs-on-the.jpg?fit=1320%2C745&ssl=1",
+      "price": 45000,
+      "amount": 8,
+      "slug": "tv-philips-55oled706",
+      "description": "Everything looks brighter on the screen of this OLED TV. Incredibly detailed, lifelike images combined with the unique Philips Ambilight will turn any movie into a real blockbuster, and every game will take you to a different exciting world.\r\nWith Philips Ambilight, every moment gets closer. Intelligent LEDs around the edges of the TV react to what is happening on the screen and change color for an even more immersive experience. Once you try it, you won't be able to refuse it again.",
+      "availability": true,
+      "cat": 3
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 9,
+    "fields": {
+      "name": "Nikon D5100 Kit",
+      "image": "https://lh3.googleusercontent.com/ajOdVPn3xAe5Kkx_Ouq1dvFmEzZiVFZCwGP1eNVq1hyLa1IbbeK6JtKsIZtAQazCoXA_aTPT6Wxv57K4sZsni0QDQ_VN70tpVH3DZxSe7kXMsb1GT-oD0rYU1yVMrty9TW3juRG6Qz-6A0RoXMCLZWsn-wtRk3D1djPoetib3yigct9BsuHcj67IY0XNBdX5zqe4rEO1McbJOeJ9kLXjHOYOautBoY4yMuLxAnpD-8L-ob7CBDSYnul_U3Dub0Mz1zZaswVDR8feofYjknsEojYHaGwDK75__CdcK7i-_47dRQIoyNRW_LA5OZR6ciRsxD57JHV28Kykg0n_f83QZFVV5wlPaZD-rOa2jQrtWYn5pX40x3cv5OaozxTloHO_7D0FPwmW0OQr-c5_Eph2WKZ5hKYuXw3fl0V7IPaVuMsJ8UTDkUrgiiZC6ltRoe1oFAKZ60j-yTG3fL_zA_gQCW3-6ZIC2eolwQl3U41VZ97YnDsgwUCzJgkBIcOImrbzCy591UvxGp2i6QHC5iNt1k_RUQcvS66kQbCvyjgO_C27x90ijc8F7cmOkcpEGFSNzlNqDpyMM6ebNitPFMIrvh0uh5_ukRofVcPAMrcZrsW6-KxyeLtP7FJ9XyRupwwnJYyBnTl78sisKoHIqcaeB4Dt09NQUUUXqmc_T6wx34d4cTaKpWAAIrzeaesJeW2uyHqCiWZBv9ek3u_H7T_4ZPp5I84GI3Lv8KOLhs8C-oyXjOaxi05K208N3g97BiyQoneXyJLcZdTTjRwmBoZl74n1Nc8=s488-no?authuser=0",
+      "image2": "https://htstatic.imgsmail.ru/pic_original/3411ccf882e3f5fce5e795888e02dad4/76294/",
+      "price": 20000,
+      "amount": 8,
+      "slug": "nikon-d5100-kit",
+      "description": "CMOS technology has largely overcome \"childhood diseases\" and provides excellent image quality, with low noise levels and a fairly wide dynamic range. The use of chips made it possible to implement previously inaccessible functions, for example, video recording in HD resolution.\r\nSize - the size of the matrix indirectly affects the image quality - with a high density of light-receiving elements, their area and, accordingly, the efficiency become smaller.",
+      "availability": true,
+      "cat": 2
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 11,
+    "fields": {
+      "name": "Macbook M1 2020",
+      "image": "https://lh3.googleusercontent.com/g4QWi7QNgoXCHth5m8SHmyQiTrarbykfIe39mzs57d4dC7S48_f_U9hrG8Ga_lGa5PwWI3pRBCDaTsSUbpy2GGe52vhVDNrVyHReIBMlMdOhgOuapynTpo5X-qW0LVA1eHDNa5Qrfi5UxIqub0l6Kr2q9Id1heiQDKn6hr4sowd9jOsW7CrKLq2VDSHUUCvox9JDsw-PU3GN4yzpu0nMiOWbww0LiKL94QDbiILtiXWcdQ7mVGsluERu_sLQCmOxow7juX4jJ-LJBwToDyspApNj07dWUT9vo5aRCmSegtiD3qbsF49Be93Z9j0-FBjYEGOF66JPFjypugczvAc9VUUEWaTkQC8HtuIi4YPpZa8AG8ZltaMzJu1dz0qpD4vAbFQdjSNeUJZUpJzGYDX0umodFoGMeJnFJqTolgbAc1MrkVpF32XukeBNI_L_PTdRPJmwCywy9e3NgydiP7C9UODHtmkGYxWyTppheA5atyDEydA7gQqMFg8KmMuM87h4V066nP4ZTdVgRygdTHtJxbpNLTpnoyJ23dcuFCLpizlUbSTIjYOuNAejj0BffrpVJmUTi1EWE2sFquTi-X7kCNsR1tiQMW2DXwAywR_I5klxDT6lgUJn0aTZ30wQL58TJi481AwOFgjCXPeXWvxj6-N6UL0ViwIaFyPzgGILLbafe4arysozgl1sUUVVzEwaoAv5FmYSFUsXY1Fi4MdFSirQ6ofikA6li-77D54CYmQleP5vFIuUXstSXQIBn3_Ka-LcekXehxZObPLWDHji--6RmWYcgcDeBMwy_C40pUw8gQfEY--XVTeIY6qGhgTCpCOo7uYMkNPDwZWqej5ji8b7eaJVJGlqXd-A5efalUswJdhz7TsO268Ytl6kVf3WtDYBRXMgRl28d2B6RaBtvYn0Wm0mXZel7Jbu0fkS6UnUcxjh06GDub2zYjhZDlKkZP4JkA=s500-no?authuser=0",
+      "image2": "https://mediasat.info/wp-content/uploads/2021/07/Apple-MacBook-Air-13-2020.jpg",
+      "price": 47000,
+      "amount": 14,
+      "slug": "macbook-m1-2020",
+      "description": "Meet. The first chip designed specifically for the Mac. Amazingly, the Apple M1 system-on-a-chip packs 16 billion transistors and integrates a CPU, GPU, Neural Engine, I/O controllers, and a host of other components. The Apple M1 chip brings unique technologies to your Mac and delivers incredible performance combined with industry-leading power efficiency. This is not just another step for the Mac - this is a whole new level of possibilities.",
+      "availability": true,
+      "cat": 1
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 12,
+    "fields": {
+      "name": "Canon EOS20000",
+      "image": "https://lh3.googleusercontent.com/PIfvIbNvwQwze6eGSXW1PR93UcxPMJC4SBUiqjqm6mQrNuOrME0cUMHGVoEp1ECpLUDLwZZ2WtiEth-OQEJJghy4vzZSyRYlE3QrOX3rZYrPYU4pOrqo6PTpLtJmtVff9VY4UZNefzHdOoUwxoTAt4ePk5-hwXjNV4zQU903uGVwPpsH4CnGPrXpha4ZaJCkv4cXb_oO2uIwnJGqGwRsZECAwLJmvWB6YPGdix7lCUL5VCqlzz_KWle4YIVd4izeeMJabKNq-xihUS-lRHFjPZuchtNe4W-SkL9mj0VOkO7aQ_uwZrvsQZOmfryQnjaWQUo80BEECdCjSxl5HwQ2fT5x_eVQHHWYJHDvaNQl50FE6nNOTAX5XfFDKWFuvv_o-rxoUycqczQrlHC1J-JSobZMyZ1611JfddJHGnOKiH3Ocxr3qXvEuNcmI9St0_s67S6r6GJbwyN53rgxKuxS-Mab8IfYMqL1KrA5yml9bekLSeMr368gIUqL1mKqmxhxABdPaAFWPgdbRmw8_qNDnKd6C-4YsDybpjeHRsEGrfZaI5O8vco9WZPLFfSt9kuafl3PysjysjH9gKCe8b_75p-OVS2EFtxb_xBMn5WaQ3pDn5HopyRWIn28mdmp7vqa3Z-0fyz4CuJSKtsv9R0zK0_ueuoOv5C3bLR4TqzO2Y2Dszdd1PoHIe5n3KqZRBhy0WaxhyYkUPYZgOoXIgHD5k6a6ZAPNLlwNTiT2yu8zuEtWh2ilTFtxdUrxcvh3R5YsD12TZmgdcCMbUT5HbNNPYTB3h4=w292-h240-no?authuser=0",
+      "image2": "https://www.trustedreviews.com/wp-content/uploads/sites/54/2018/06/canon_eos_2000d_01.jpg",
+      "price": 24000,
+      "amount": 0,
+      "slug": "canon-eos20000",
+      "description": "Ideal as your first DSLR: Intuitive controls for capturing and sharing beautiful shots with blurry backgrounds.\r\nUnleash your creativity and save memorable moments easily.\r\nEasily capture high-quality, detailed photos and cinematic-quality Full HD movies even in low-light conditions with the 24.1-megapixel EOS 2000D. Control your camera remotely and share photos instantly using Wi-Fi, NFC and the Canon Camera Connect app.",
+      "availability": false,
+      "cat": 2
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 13,
+    "fields": {
+      "name": "MSI Modern 14 B10MW",
+      "image": "https://lh3.googleusercontent.com/5nLhSM_FmZN8Y0zMTjl2nCPaVaZnWWaIa0Zi-6_7uj7UbwdeSow_12-wthY9Rj7fecx-T2A3cwqNBB3xzrxg74fLQ4k7JnMQytqiyiixOR_sju9G32kIoe1mUWJJqGEjVPbGQwsxMrCd3Az9DixiyTGwTwBmKLwJIo4QO7UsVswbdW262Y2FnukkNORNzCq-c2WoSX9mAMVIc1U9e3vuYwN72Z_h8AbW6_KApJDjhIewcyMn25c5EmQMmFtt01bAs0U6-dcWMd-5Eb2_RkvCm2-gdpuUgvL3jphBimgC0Tfr6pmGPCpIxsnQP5YDYj9S5slMM5BJApgvypDwj-ifTiaLYApbp9vGnzUG73Rd_7QxRsK0dnVK8JpcIN99z8zBoeLmue2uk5vPUKwlfd3qElvhhdhvqioNPKfODijSG1-p8sQfOfoJlRx_9ffWXKrX1e4vQLT8zylV9ZKbfA4vp1tagqS1E2fIKyvxBet3FFMlO9VyZzuiiBZtqh2gzGyEDKnT9i1oR-mACzXcS7dys5F7YAIns945d8SP18jyrFt2hUjsytfq40oAF9qmEZwQIbDSjhlCLQC8-gV-ILEi4vMGQ5hTkdyqGSMwhLu1a4RfZCiKJXYM3zuhcQ4w8XAliNeOGZ39hlnVJHtFdRmyI4JeEiVpFsYc7ahdOvs6TfER97DlYE4OlmONOUdkv3pZtzuEOa9B_pgtF9y6WIA5ZituNznumqB2GXcmvgtmtyF1YVqvYM9HXG4WXrq7EpI5XJy31koEMNe_8gDWXyzuG1Rr4hU=s500-no?authuser=0",
+      "image2": "https://itc.ua/wp-content/uploads/2019/12/msi_modern_14_2.jpg",
+      "price": 32000,
+      "amount": 5,
+      "slug": "msi-modern-14-b10mw",
+      "description": "Image quality is the most important aspect of working with multimedia content, and the exclusive True Pixel display boasts the excellent performance required for this. 4K resolution, wide color coverage (100% Adobe RGB), accurate color transfer (Delta-E <2), True Color technology and CalMan certification - this display will be an ideal tool for design or video editing.",
+      "availability": true,
+      "cat": 1
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 14,
+    "fields": {
+      "name": "Nokia Smart TV 5500A",
+      "image": "https://lh3.googleusercontent.com/ZvtDX5QPTBAX7Jyt1yxHLGqT78Cz-zkovBoZjlyICRwxIUVEvoyidGMJB5wldUWdFpiIb4Qi62AbI2zNHWBFQgoW6i-DBZIsSjQAAlsFVGYrxmp8B66k8elLs54hbs_TGRvTDCKC1Jt4JHo-tCCjBObCyvFRqB-Xh-7riZER44UWt-M8GogA9ydrNdSd-pYq-g6tTGLlhqD5XGbCznFDTlzyfU9LG9YX8D1EWWUhxYfjCrSIYHjH_t3mTsbBx76S8JUexc7GTCeWKPTLp_yAUMAxZlBiWIkQ7jV5Pz1mv_iCj2xRqCHUTBglQk0y5oakPk3fobsUZa8VFMvUqBzBtTJzZ2DpCZN0FKrP-anDgZhzqbXAPOTMYr0T781-c3-UGUVHDasF-s6sytMBJtXK8yWWh6T_7cQZPx77m0bbquzGcbGH5pmlfU_GTiQydDMZxMarujKiMRT1zDN9auu2UoCcxsV4qWto0kLq8-MqbYVaAOQB0EegujhfosyFXxmxi6BJegsf56Hc8dhO7uu7i8uRGN_xQK0a-JQ6yZsfknlcFsH_jvp8LVeO39_F8dP_2kRr9_-NPbU0Y46LA-T-4bmxAOz9bsgsHpdoqnYumJLm2hyUPooE9EpBV8Iv3W_P1X89t49f1dMR78Lnjuuwlrr0h2rUn8Q8SLKKPZXbuW7fUFnEWDXbCbd38tqHkfAnXEweJ7VOkQg4FsLL_M1wynXZzETGLpchE5iLCGPiuhWYxQzTSyr9duzxN0DRG6vp6LQG91Q1I_napgSRd-8N7Hw0PQY=s500-no?authuser=0",
+      "image2": "https://voonze.com/wp-content/uploads/2022/03/nokia-smart-TV-1.jpg",
+      "price": 18000,
+      "amount": 0,
+      "slug": "nokia-smart-tv-5500a",
+      "description": "Smart - TV Nokia Smart TV 5500A based on Android TV has got everything you need to become a real sensation in your home. It has a wide range of functionalities, making it a true center of multimedia entertainment. Watch your favorite movies, series and TV shows on the biggest streaming platforms like YouTube, Netflix, Disney+, Prime Video and more. Google Play Store will give you access to thousands of apps, games, music and movies. Enjoy watching your favorite TV channels thanks to the triple tuner. Nokia Smart TV is your guide to the exciting world of multimedia entertainment.",
+      "availability": false,
+      "cat": 3
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 15,
+    "fields": {
+      "name": "TV Samsung UE40T",
+      "image": "https://images.samsung.com/is/image/samsung/tr-fhd-t5300-ue40t5300auxtk-frontblack-thumb-237104953?$480_480_PNG$",
+      "image2": "https://img.moyo.ua/img/products_desc/4635/463569_1585823821_0.JPG",
+      "price": 15000,
+      "amount": 10,
+      "slug": "tv-samsung-ue40t5300auxua",
+      "description": "The image in your favorite TV programs and movies is now indistinguishable from reality. Full HD resolution is twice the image resolution of HD TVs.\r\nSmart Hub and Universal One Remote (Availability of this feature may vary by region. Check availability of this feature before use.)\r\nNow smarter with Smart Hub and One Remote. Everything you need is already at your fingertips, from easily setting up your favorite console to installing up-to-date apps and watching TV.",
+      "availability": true,
+      "cat": 3
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 16,
+    "fields": {
+      "name": "Xiaomi Mi TV P1 43",
+      "image": "https://i02.appmifile.com/189_operator_in/10/08/2021/bd184f7cfebbf8a619381d5b20af0ac6.png",
+      "image2": "https://mobile-review.com/all/wp-content/uploads/2021/08/anons-59.jpg",
+      "price": 16000,
+      "amount": 0,
+      "slug": "xiaomi-mi-tv-p1-43",
+      "description": "The Mi TV P1 TV impresses with its harmoniously thought-out appearance with thin frames and stylish stands, innovative functionality, and a friendly Android TV interface. The model has a remote control connected via Bluetooth, and a lot of ports for creating a network of devices. Access to online cinemas opens up almost limitless possibilities for the user. Now TV is not only about watching, but also about exciting leisure time for the whole family.",
+      "availability": false,
+      "cat": 3
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 17,
+    "fields": {
+      "name": "Laptop Lenovo IdeaPad 3",
+      "image": "https://lh3.googleusercontent.com/eiLcmKQAbUqYmitq2BMR8wVabtyxW-xdM-mLEaDwJpPtfrtgEET9jSwQuDUZVvvW3gwd5jYFZ3hTxMHRmujjBrF7VDhN0s8gtoAOIOi8dP0vXNfsZUnKz5rqSdW-N4DsQqyBienyCM6pAnYPCGVCJ4SQKqm3VHsKA4a_1oplouwrvw_DNyaPeWzTyrog5CF2Nxe3jYkIm4PKWArxbssnC-5Irpqw6I4WFZW9iCNSL97Pw-snrHTcdh6hoJBna6b2NZ6QD8B4CtDNWRJJewRUjnFfFOFF4as83VPcGzL5LdFH3sPIrHGkw6wX2MS_k77tXk8f9Yvj37zDByNSlwZoemETl4Dc0xbHXDtVbRl2No2vfCCXDHAa8fZrqhpRwLRaaTH0cbN4wrLWjx0PF-G_lytCpkcXZUyNuPWO9JQMMyBjf7VNVhNlMiA2TWV_BQY3FGHFXWFU5ebAFbwmH2lthlZvarzLoqT08nAksMDe5iaIS2O-DPRNhd8u4YattkPjAV7c284QBaHnits81tChFTbkZM733LTpIvkbBc3s8_CeSOZqGyb0oxRPPDnagoIVdojSl5U4T6jM4XZ_Rx0QVN8-9gcDLeyw9PRl1pCHk08dfaxj29Bm4ZWF1XOtNzHIs3xzhkZ_RiTfaXanNCWXzNQYTz5i-5n4U98lXQQX86k9mYxYq1bkQfREpK2VMyVSFBOpyc50RrOW7P9iDUcn9LLzhg5Fp6zXNRqP0z20ny2-FQGok4jvV6njz0AO8AiCzi4VN3SxblOs4aK5JhyXh3hOWWxpNAE3rX7TqUFlWPBlEQY8xH5OjWe5LpvCWuAxzJsj3IS5BJ_H1Q1AY8J4oQp-hQUBk3uETtH8FZO0QyYA29tOGeY13hHw53BeS1PnyntnB21veJxbmcP_f-oiYvTi0qOJOzaistySoZX0wML2GZofzXVx9Xzx77Tz0f6RYzB7rg=s480-no?authuser=0",
+      "image2": "https://technoguide.com.ua/wp-content/uploads/2020/12/ideapad-gaming-3i-2.jpg",
+      "price": 33000,
+      "amount": 0,
+      "slug": "lenovo-ideapad-3",
+      "description": "GeForce GTX 1650 gaming laptops use the award-winning NVIDIA Turing architecture. It delivers exceptional graphics quality, giving you a whole new look at your favorite games.\r\nEvery Lenovo IdeaPad 3 laptop supports Dolby Audio. This advanced audio technology will help you play at a whole new level even on the go and get the most out of your game!",
+      "availability": false,
+      "cat": 1
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 18,
+    "fields": {
+      "name": "Sony Cyber-Shot",
+      "image": "https://lh3.googleusercontent.com/Y6QABQ6jay-K-atrQDOV-4S9oF7qlqNphmcdau4OX4XrPbzARNfC4X-wyX_OonthrsVoRTgKOFtlLItLNoGdKEsHwDUFjQ3Ou2kBmKRiAbqtcI6lNQ-T1kIA9QXPlDf-CkJz-1UMnga3Us1J81vIAeKOxYJetEhFL8tfJZwwEOLGRuqA-pJiq4SKGIISRr3MRARMlgGOUhbrSt3GYN_AJ9-tN17PC2sXY0ZCnbVLWJdcyJ_LblkNSAJkBS4rdwQbN12yp0ox21p5_E9-8g1yXsnIbV0A9jdc-wu1I5GoOppvxCsNSp4Fiwo6D0RvSGylBvzrv-aaXv7n6N3x0qTDSfo1flMIPhNm66IdV9kqtmDIo2URBMuNQdcsTQhhQbyyYWn3cL-c5x-XaUj5FwZFhm4VyCUjhY31wzkuAsz9Pg8pWDQqxcEhUknwAyf8Am_fXZMq9Xl-n5uUXsyiK9Nz2pF41mncsS8EVWKvgASwGIDcS-Q3gDQoqNfhx9i97PzytKhoxC8lp0MlQFYMU_T_8BhRw9IVVTaflZyo8j1NZ-RwrOIyEvk401duQsppbXL-AhLyDa4A6lswIEp9c73BKXER_W4xU75G8OE5N_-EahbAwaMtBatcW6VIL6kmYvVPnUwhpn4NUPb1osi4rufLcfBKuh-xPDjDEJiMiVwFdvLLpqd-qi-76Vk-0BclQwgGLIvgz8MFqRCI5i1vpGpm5tYQ6MDVLUpVxl9JK31d4ijjLm8TDckesuDePM5HEjEbw_zP0FoxzdNPG0vVY-MUl4ql_6DP4SgNmxq52ivgW7uXUR8nNUipmoEdVDFC9fQHisGy_V1QTcmFG7pWTO1rMB5Cw1_NxcasyMmqZqk4U5UwqSJ9weX_i-qYCnv60UIs6s4ESpci-QAwX_eyxzqLob6nszLENCtZXQktLqWMyFjxBueVAe6TUxRjD_nRnuopaDisUg=w563-h443-no?authuser=0",
+      "image2": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Sony_DSC-HX300.jpg/1280px-Sony_DSC-HX300.jpg",
+      "price": 10000,
+      "amount": 10,
+      "slug": "sony-cyber-shot",
+      "description": "Shoot close-ups with confidence with the Cyber-shot H300. Its 35x optical zoom brings the subject closer for clear shots, or zooms out for wide-angle shots.\r\nWith a powerful 35x optical zoom, the Cyber-Shot H300 brings your subject closer so you can capture beautiful, clear shots. A 20.1 MP sensor, HD video and artistic tools make it easy to shoot in every detail.",
+      "availability": true,
+      "cat": 2
+    }
+  }
+]

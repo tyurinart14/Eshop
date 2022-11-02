@@ -26,6 +26,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+
+CART_SESSION_ID = "cart"
 # Application definition
 
 INSTALLED_APPS = [
@@ -35,10 +37,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'user.apps.UserConfig',
 
-    'products.apps.AplicationConfig'
+    'user.apps.UserConfig',
+    'products.apps.ProductsConfig',
+    'orders.apps.OrdersConfig',
+    'cart.apps.CartConfig',
+    'goods_return.apps.GoodsReturnConfig'
+
 ]
+
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -55,7 +63,7 @@ ROOT_URLCONF = 'djangoEshop.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR / 'templates',)],
+        'DIRS': [os.path.join(BASE_DIR / 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

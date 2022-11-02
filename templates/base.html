@@ -7,30 +7,47 @@
 </head>
 <body>
 <div class="first_btn-group" style="width: 100%">
-    <form action="http://127.0.0.1:8000/homepage" target="_self">
+    <form action="{% url "homepage" %}" target="_self">
         <button style="width: 100%">Electronic shop</button>
     </form>
 </div>
 <div class="second-btn-group" style="width:100%">
-    <form action="{% url "basket" %}" target="_self">
-        <button style="width:33.33%">Basket</button>
-    </form>
     {% if user.is_authenticated %}
-        <form action="{% url "client_page" slug=user.username %}" target="_self">
-            <button style="width:33.33%">Personal Area</button>
-        </form>
+        {% if user.is_staff %}
+            <form action="{% url "returns_list" %}" target="_self">
+                <button style="width:33.33%">Returns of goods</button>
+            </form>
+        {% else %}
+            <form action="{% url "cart_detail" %}" target="_self">
+                <button style="width:33.33%">Basket</button>
+            </form>
+        {% endif %}
     {% else %}
-        <form action="{% url "login" %}" target="_self">
+        <form action="{% url "cart_detail" %}" target="_self">
+            <button style="width:33.33%">Basket</button>
+        </form>
+    {% endif %}
+    {% if user.is_authenticated %}
+        {% if user.is_staff %}
+            <form action="{% url "products:add_product" %}" target="_self">
+                <button style="width:33.33%">Add product</button>
+            </form>
+        {% else %}
+            <form action="{% url "user:client_page" slug=user.username %}" target="_self">
+                <button style="width:33.33%">Personal Area</button>
+            </form>
+        {% endif %}
+    {% else %}
+        <form action="{% url "user:login" %}" target="_self">
             <button style="width:33.33%">Login</button>
         </form>
     {% endif %}
-    </form>
     {% if user.is_authenticated %}
-        <form action="{% url "logout" %}" target="_self">
+        <form action="{% url "user:logout" %}" target="_self">
             <button style="width:33.33%">Logout</button>
         </form>
     {% else %}
-        <form action="{% url "register" %}" target="_self">
+        <form action="{% url "user:register" %}" target="_self">
             <button style="width:33.33%">Registration</button>
         </form>
     {% endif %}

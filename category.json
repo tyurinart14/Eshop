@@ -1,0 +1,29 @@
+[
+  {
+    "model": "products.category",
+    "pk": 1,
+    "fields": {
+      "name": "Laptops",
+      "slug": "laptops",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 2,
+    "fields": {
+      "name": "Cameras",
+      "slug": "cameras",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 3,
+    "fields": {
+      "name": "TV",
+      "slug": "tv",
+      "description": ""
+    }
+  }
+]

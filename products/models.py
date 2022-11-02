@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 class Category(models.Model):
@@ -17,3 +18,10 @@ class Product(models.Model):
     description = models.TextField(blank=True)
     availability = models.BooleanField(null=True)
     cat = models.ForeignKey('Category', on_delete=models.PROTECT, null=True)
+
+    class Meta:
+        db_table = "products_product"
+        verbose_name = "product"
+
+    def get_absolute_url(self):
+        return reverse("homepage")

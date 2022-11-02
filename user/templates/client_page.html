@@ -14,9 +14,11 @@
             name: {{ object.last_name }}</h1>
         <h1 style="width: 85%; height: 60px; color: #272727; position: relative; left: 10%">
             Mail: {{ object.email }}</h1>
+        <h1 style="width: 85%; height: 60px; color: #272727; position: relative; left: 10%">
+            Wallet balance: {{ object.wallet }} UAH</h1>
         <div>Change profile data</div>
     </form>
-    <form action="{% url "update_page" slug=user.username %}">
+    <form action="{% url "user:update_page" slug=usermodel.username %}">
         <button>Edit new data</button>
     </form>
 {% endblock %}

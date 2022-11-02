@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Checkout{% endblock %}
+{% block container %}
+    <h1 style="width: 97%; height: 70px; color: #272727; position: relative; left: 45%">Checkout</h1>
+    <div style="text-align: center" class="order">
+        <h3 style="width: 97%; height: 10px; color: #272727; position: relative; left: 1.5%">Your order</h3>
+        <ul style="margin: 1%">
+            {% for item in cart %}
+                <li>
+                    {{ item.quantity }}x {{ item.product.name }}
+                    <span>{{ item.total_price }} UAH</span>
+                </li>
+            {% endfor %}
+        </ul>
+        <p>Total price: {{ cart.get_total_price }} UAH</p>
+    </div>
+    <form style="text-align: center; "
+          action="." method="post" class="order-form">
+        {{ form.as_p }}
+        <p><input type="submit" value="Place order"></p>
+        {% csrf_token %}
+    </form>
+{% endblock %}
