@@ -10,13 +10,13 @@ class Category(models.Model):
 
 class Product(models.Model):
     name = models.CharField(max_length=32)
-    image = models.TextField(blank=True)
-    image2 = models.TextField(blank=True)
+    image = models.TextField()
+    image2 = models.TextField()
     price = models.IntegerField()
-    amount = models.IntegerField(null=True)
+    amount = models.IntegerField(null=True, default=0)
     slug = models.SlugField(max_length=32)
-    description = models.TextField(blank=True)
-    availability = models.BooleanField(null=True)
+    description = models.TextField()
+    availability = models.BooleanField(null=True, default=False)
     cat = models.ForeignKey('Category', on_delete=models.PROTECT, null=True)
 
     class Meta:
