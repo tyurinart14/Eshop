@@ -1,6 +1,8 @@
 from products import views, api_views
 from django.urls import path
 
+app_name = "products"
+
 urlpatterns = [
     path('product/<int:num>/<slug:slug>/', views.product_detail,
          name="product"),
